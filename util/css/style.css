@@ -1,0 +1,337 @@
+html 
+{
+	font:normal 100%/1.2em "Trebuchet MS",Verdana,Helvetica,Arial,sans-serif;
+}
+
+fieldset 
+{
+ 	display:block;
+ 	width:50%;
+	border: 1px dotted #353535;
+	padding:2px;
+ 	overflow:hidden;                   
+}
+
+.erreur
+{ 
+   background-color:rgb(237,210,229);
+   color:rgb(203,28,128);
+   font-size:1.1em;
+   width:95%;
+}
+.message
+{ 
+   background-color:rgb(99, 184, 255);
+   color:rgb(0,0,205);
+   font-size:1.1em;
+   width:95%;
+}
+
+#menu
+{
+	height: 1.8em;
+}
+
+#categories
+{
+	float:left;
+}
+
+#produits
+{
+	padding:0 150px;
+}
+
+#menu li 
+{
+	list-style-type: none;
+	list-style-image:none;
+	float: left ; 
+	text-align: center;
+    width: 200px ; 
+    border: 1px solid #600 ; 
+    margin-right: 1px ; 
+    color: #fff ; 
+    background: #ccff11 ;
+}
+
+#menu li a , #categories li a 
+{
+	text-decoration:none;
+}
+
+#categories li 
+{
+	list-style-type: none;
+	list-style-image:none;
+	/*float:left; */
+    margin-right: 1px ;
+    border:1px solid #600;
+    width:100px;
+    text-align:center;
+	background:#ccff11;
+}
+
+
+#produits li, #produits li a 
+{
+	list-style-type: none;
+	list-style-image:none;
+	display:inline; 
+    width:175px;
+    text-align:center;
+    height:205px;
+    font: 1em "Trebuchet MS",Arial,sans-serif ;
+}
+
+---------------------------------------------------
+
+img 
+{
+    width: 100%;
+    height: auto;
+}
+
+body
+{
+	background-color: #D8D8D8;
+}
+
+.rond
+{
+	border-radius:50%;
+	width:100px;
+	height:100px;
+	background: linear-gradient(#2E2E2E, #585858);
+	border:none;
+	outline:none;
+	color: #a7a7a7;
+	margin:20px;
+}
+
+div.rond
+{
+	text-align:center;
+}
+div.rond span
+{
+	position:relative;
+	font-size:20px;
+	top:40px;
+}
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider 
+{
+  margin: 30px; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading 
+{
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 768px) 
+{
+  /* Navbar positioning foo */
+  .navbar-wrapper 
+   {
+    margin-top: 20px;
+  }
+  .navbar-wrapper .container 
+   {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .navbar-wrapper .navbar 
+   {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  /* The navbar becomes detached from the top, so we round the corners */
+  .navbar-wrapper .navbar 
+   {
+    border-radius: 4px;
+  }
+
+  /* Bump up size of carousel content */
+  .carousel-caption p 
+   {
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 1.4;
+  }
+
+  .featurette-heading 
+   {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 992px) 
+{
+  .featurette-heading 
+   {
+    margin-top: 60px;
+  }
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html 
+{
+  position: relative;
+  min-height: 100%;
+}
+body 
+{
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer 
+{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 70px;
+  background-color: #f5f5f5;
+}
+
+
+/* FOOTER
+-------------------------------------------------- */
+
+body > .container 
+{
+  padding: 0px 10px;
+}
+.container .text-muted 
+{
+  margin: 15px;
+}
+
+.footer > .container 
+{
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+code 
+{
+  font-size: 80%;
+}
+
+#imgF
+{
+	position : absolute;
+	bottom: -60px;
+	left: -40px;
+}
+
+/*BOUTTON*/-------------------------------------------------
+$red:#F44336;
+@mixin transition($in) {
+	transition:$in;
+	-webkit-transition:$in;
+	-moz-transition:$in;
+	-o-transition:$in;
+	-ms-transition:$in;
+}
+@mixin transform($in) {
+	transform:$in;
+	-webkit-transform:$in;
+	-moz-transform:$in;
+	-o-transform:$in;
+	-ms-transform:$in;
+}
+@mixin animation($in) {
+	animation:$in;
+	-webkit-animation:$in;
+	-moz-animation:$in;
+	-o-animation:$in;
+	-ms-animation:$in;
+}
+
+body {
+	margin:0;
+	padding:0;
+	background-color:#222;
+}
+* {
+	font-family:Helvetica,sans-serif;
+	color:$red;
+}
+
+header {
+	text-align:center;
+
+	h1 {
+		text-transform:uppercase;
+	}
+}
+
+.myButt {
+	outline:none;
+	border:none;
+	padding:20px;
+	display:block;
+	margin:50px auto;
+	cursor:pointer;
+	font-size:20px;
+	background-color:transparent;
+	position:relative;
+	border:2px solid #fff;
+
+	@include transition(all 0.5s ease);
+}
+
+
+// ################ THREE
+
+.three {
+	color:#fff;
+	border-color:transparent;
+
+	&:before {
+		width:0;
+		height:3px;
+		content:" ";
+		background-color:$red;
+		position:absolute;
+		top:0;
+		left:50%;
+
+		@include transition(all 0.3s ease);
+	}
+
+	&:after {
+		@extend .three:before;
+		top:100%;
+	}
+
+	&:hover {
+		letter-spacing:8px;
+		color:$red;
+
+		&:before {
+			width:100%;
+			left:0;
+		}
+		&:after {
+			width:100%;
+			left:0;
+		}
+	}
+}
